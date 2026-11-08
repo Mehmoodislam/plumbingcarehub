@@ -7,7 +7,7 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Plumbing emergency? PlumbingCareHub delivers 24/7 rapid dispatch for burst pipes, drain clogs, sewer backups & water heaters. 100% upfront flat-rate pricing with zero overtime fees. Call (800) 555-CARE now!">
-    <meta name="keywords" content="emergency plumber, 24/7 emergency plumbing, plumber near me, burst pipe repair, clogged drain cleaning, sewer backup service, water heater repair, emergency plumbing service, local licensed plumber">
+    <meta name="keywords" content="emergency plumber, 24/7 emergency plumbing, plumber near me, burst pipe repair, clogged drain cleaning, sewer backup service, water heater repair, emergency plumbing service, local licensed plumber, PlumbingCareHub">
     <meta name="author" content="PlumbingCareHub Emergency Services">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.plumbingcarehub.com/">
@@ -17,12 +17,17 @@
     <meta property="og:url" content="https://www.plumbingcarehub.com/">
     <meta property="og:title" content="24/7 Emergency Plumber Near You | PlumbingCareHub">
     <meta property="og:description" content="Fast 30-45 min emergency plumbing response. Burst pipes, backed-up sewers, water heaters, and drain clogs. Licensed & insured. Call (800) 555-CARE.">
-    <meta property="og:image" content="https://www.plumbingcarehub.com/assets/images/og-plumbing.jpg">
+    <meta property="og:image" content="https://www.plumbingcarehub.com/assets/images/service-leak-repair.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="24/7 Emergency Plumber | Rapid Response | PlumbingCareHub">
     <meta name="twitter:description" content="Emergency plumbing emergencies don't wait. Zero overtime fees, flat-rate pricing, 24/7 rapid dispatch.">
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,17 +35,26 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
                     colors: {
                         brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                            navy: '#0a2540'
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc5fb',
+                            400: '#38a5f8',
+                            500: '#0077f6',
+                            600: '#0066f5',
+                            700: '#0052cc',
+                            800: '#0043a6',
+                            900: '#0a2e66',
+                        },
+                        navy: {
+                            800: '#0b2545',
+                            900: '#071d38',
+                            950: '#051326',
                         },
                         emergency: {
                             50: '#fef2f2',
@@ -77,7 +91,7 @@
           "telephone": "+1-800-555-2273",
           "priceRange": "$$",
           "description": "Licensed 24/7 emergency plumbing service specializing in burst pipes, main sewer line repairs, water heater emergencies, drain snaking, and commercial plumbing.",
-          "image": "https://www.plumbingcarehub.com/assets/images/logo.png",
+          "image": "https://www.plumbingcarehub.com/assets/images/service-leak-repair.jpg",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "700 Commerce Way Suite 400",
@@ -191,127 +205,143 @@
     }
     </script>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white pb-20 md:pb-0">
+<body class="bg-[#fcfdfe] text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white pb-16 md:pb-0">
 
-    <!-- 1. TOP LIVE EMERGENCY TICKER (Ultra Responsive) -->
-    <aside class="bg-gradient-to-r from-red-700 via-emergency-600 to-red-800 text-white text-xs font-semibold py-2 px-3 sm:px-4 shadow-sm">
-        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-            <!-- Left: Live Pulsing Indicator -->
-            <div class="flex items-center gap-2 truncate">
-                <span class="flex h-2.5 w-2.5 relative shrink-0">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
-                </span>
-                <span class="tracking-wide uppercase font-bold text-amber-200 shrink-0">24/7 Dispatch:</span>
-                <span class="truncate">Active Units on Standby • Avg Arrival: <strong>30-45 Mins</strong></span>
-            </div>
-
-            <!-- Right: Action / Guarantee (Visible on all screens) -->
-            <div class="flex items-center gap-3 shrink-0">
-                <span class="hidden md:inline-block text-red-100 text-xs font-medium">⚡ $0 Night &amp; Weekend Fees</span>
-                <a href="tel:8005552273" class="inline-flex items-center gap-1.5 bg-white text-red-700 hover:bg-red-50 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs font-extrabold shadow-sm transition">
-                    <svg class="w-3.5 h-3.5 text-red-600 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
-                    <span>(800) 555-CARE</span>
-                </a>
-            </div>
-        </div>
-    </aside>
-
-    <!-- 2. MAIN HEADER & NAVIGATION (High Trust Clean Light Design) -->
-    <header id="mainHeader" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2">
+    <!-- 1. TOP LIVE DISPATCH & CONTACT BAR (Modern Navy Bar Inspired by Reference) -->
+    <div class="bg-[#092244] text-white text-[12px] font-medium py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
             
-            <!-- Brand Logo -->
+            <!-- Left: Live Dispatch Status & Phone -->
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-slate-200">
+                <div class="flex items-center gap-2">
+                    <span class="flex h-2 w-2 relative shrink-0">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span class="tracking-wide uppercase font-bold text-sky-300 text-[11px]">24/7 Live Dispatch:</span>
+                    <span class="text-xs text-slate-300">Avg Arrival: <strong class="text-white">30-45 Mins</strong></span>
+                </div>
+
+                <a href="tel:8005552273" class="inline-flex items-center gap-1.5 hover:text-white transition">
+                    <svg class="w-3.5 h-3.5 text-sky-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+                    <span>(800) 555-CARE / (800) 555-2273</span>
+                </a>
+
+                <div class="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
+                    <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>700 Commerce Way Suite 400, Atlanta, GA</span>
+                </div>
+            </div>
+
+            <!-- Right: Zero Overtime Guarantee & Social Links -->
+            <div class="flex items-center gap-4">
+                <span class="hidden md:inline-block text-sky-200 text-xs font-semibold">⚡ $0 Night &amp; Weekend Overtime Fees</span>
+                <div class="flex items-center gap-2">
+                    <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition text-xs" aria-label="Facebook">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition text-xs" aria-label="X">
+                        <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="w-6 h-6 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition text-xs" aria-label="LinkedIn">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER & MODERN NAVIGATION -->
+    <header id="mainHeader" class="sticky top-0 z-40 bg-white border-b border-slate-100 transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo (PlumbingCareHub with Modern Water Droplet Badge) -->
             <a href="/" class="flex items-center gap-2.5 sm:gap-3 group shrink-0" title="PlumbingCareHub Emergency Plumbers">
-                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
-                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-700 via-blue-600 to-sky-400 flex items-center justify-center text-white shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                     </svg>
                 </div>
                 <div>
-                    <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center">
-                        Plumbing<span class="text-brand-600">Care</span><span class="text-slate-500 font-medium">Hub</span>
+                    <span class="text-xl sm:text-2xl font-black tracking-tight text-[#071d38] flex items-center">
+                        Plumbing<span class="text-blue-600">Care</span><span class="text-slate-400 font-semibold">Hub</span>
                     </span>
-                    <span class="block text-[9px] sm:text-[10px] tracking-widest uppercase text-slate-500 font-semibold -mt-0.5 sm:-mt-1">
+                    <span class="block text-[9px] sm:text-[10px] tracking-widest uppercase text-slate-500 font-bold -mt-0.5 sm:-mt-1">
                         24/7 Emergency Plumber
                     </span>
                 </div>
             </a>
 
             <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-slate-700" aria-label="Main Navigation">
-                <a href="#services" class="hover:text-brand-600 transition">Services</a>
-                <a href="#triage" class="hover:text-brand-600 transition">Emergency First-Aid</a>
-                <a href="#why-us" class="hover:text-brand-600 transition">Why Us</a>
-                <a href="#pricing" class="hover:text-brand-600 transition">Flat Pricing</a>
-                <a href="#reviews" class="hover:text-brand-600 transition">Reviews</a>
-                <a href="#faq" class="hover:text-brand-600 transition">FAQs</a>
+            <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-[14px] font-semibold text-slate-700" aria-label="Main Navigation">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#triage" class="hover:text-blue-600 transition">Emergency First-Aid</a>
+                <a href="#why-us" class="hover:text-blue-600 transition">Why Us</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">Flat Pricing</a>
+                <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQs</a>
             </nav>
 
-            <!-- Desktop Action Buttons -->
-            <div class="hidden sm:flex items-center gap-2.5">
-                <button type="button" data-open-modal class="hidden md:inline-flex px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-brand-600 border border-slate-300 hover:border-brand-500 rounded-lg transition bg-slate-50 hover:bg-brand-50/50">
-                    Book Online
+            <!-- Desktop Action Buttons (Pill Buttons Inspired by Reference Design) -->
+            <div class="hidden sm:flex items-center gap-3">
+                <button type="button" data-open-modal class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-blue-600 border border-slate-200 hover:border-blue-400 rounded-full transition bg-slate-50 hover:bg-blue-50/50">
+                    <span>Book Online</span>
                 </button>
-                <a href="tel:8005552273" class="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-red-600 to-emergency-600 hover:from-red-700 hover:to-emergency-700 text-white font-extrabold rounded-lg shadow-md shadow-red-600/20 transition transform hover:-translate-y-0.5 text-sm whitespace-nowrap">
+                <a href="tel:8005552273" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-full shadow-md shadow-blue-500/25 transition transform hover:-translate-y-0.5 text-sm whitespace-nowrap">
                     <svg class="w-4 h-4 animate-pulse shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
                     <span>(800) 555-CARE</span>
                 </a>
             </div>
 
-            <!-- Mobile Controls (Call button + Hamburger) -->
-            <div class="flex items-center gap-2 sm:hidden">
-                <a href="tel:8005552273" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-lg shadow-sm">
-                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+            <!-- Mobile Menu Toggle Button -->
+            <div class="flex items-center gap-2 lg:hidden">
+                <a href="tel:8005552273" class="inline-flex sm:hidden items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-full">
                     <span>Call</span>
                 </a>
-                <button id="mobileMenuBtn" type="button" class="p-2 text-slate-700 hover:text-brand-600 hover:bg-slate-100 rounded-lg focus:outline-none" aria-label="Open mobile menu">
+                <button id="mobileMenuBtn" type="button" class="p-2 text-slate-700 hover:text-blue-600 hover:bg-slate-100 rounded-lg focus:outline-none" aria-label="Open mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
-            
-            <!-- Tablet Hamburger (Between sm and lg) -->
-            <button id="tabletMenuBtn" type="button" class="hidden sm:inline-flex lg:hidden p-2 text-slate-700 hover:text-brand-600 hover:bg-slate-100 rounded-lg focus:outline-none" onclick="document.getElementById('mobileMenu').classList.remove('hidden'); document.body.classList.add('overflow-hidden');" aria-label="Open tablet menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+
         </div>
     </header>
 
-    <!-- MOBILE / TABLET OVERLAY DRAWER MENU -->
+    <!-- MOBILE / TABLET OVERLAY MENU -->
     <div id="mobileMenu" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex justify-end">
         <div class="w-full max-w-sm bg-white h-full shadow-2xl flex flex-col justify-between p-6 overflow-y-auto animate-fadeIn">
             <div>
                 <!-- Top Brand & Close -->
-                <div class="flex items-center justify-between pb-4 border-b border-slate-200">
-                    <span class="text-xl font-black text-slate-900">Plumbing<span class="text-brand-600">Care</span>Hub</span>
+                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                    <span class="text-xl font-black text-[#071d38]">Plumbing<span class="text-blue-600">Care</span>Hub</span>
                     <button id="mobileMenuCloseBtn" type="button" class="p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg" aria-label="Close menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                 </div>
 
                 <!-- Navigation List -->
-                <nav class="mt-6 flex flex-col gap-4 text-base font-bold text-slate-800">
-                    <a href="#services" class="p-2 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition flex items-center justify-between">
+                <nav class="mt-6 flex flex-col gap-3 text-base font-bold text-slate-800">
+                    <a href="#services" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
                         <span>Emergency Services</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#triage" class="p-2 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition flex items-center justify-between">
+                    <a href="#triage" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
                         <span>Emergency First-Aid Guide</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#why-us" class="p-2 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition flex items-center justify-between">
+                    <a href="#why-us" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
                         <span>Why Property Owners Trust Us</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#pricing" class="p-2 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition flex items-center justify-between">
+                    <a href="#pricing" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
                         <span>Coupons &amp; Flat Pricing</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#reviews" class="p-2 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition flex items-center justify-between">
+                    <a href="#reviews" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
                         <span>Verified Customer Reviews</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#faq" class="p-2 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition flex items-center justify-between">
+                    <a href="#faq" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
                         <span>Frequently Asked Questions</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
@@ -319,12 +349,12 @@
             </div>
 
             <!-- Drawer Bottom CTAs -->
-            <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col gap-3">
-                <a href="tel:8005552273" class="w-full flex items-center justify-center gap-2.5 py-3.5 bg-red-600 hover:bg-red-700 text-white font-extrabold rounded-xl shadow-lg shadow-red-600/25 text-base">
+            <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col gap-3">
+                <a href="tel:8005552273" class="w-full flex items-center justify-center gap-2 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-full shadow-lg shadow-blue-600/25 text-base">
                     <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
-                    <span>Emergency Call: (800) 555-CARE</span>
+                    <span>Call (800) 555-CARE</span>
                 </a>
-                <button type="button" data-open-modal class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl border border-slate-300 text-sm">
+                <button type="button" data-open-modal class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-full border border-slate-200 text-sm">
                     Request Online Service Quote
                 </button>
             </div>
@@ -333,35 +363,32 @@
 
     <main id="mainContent">
 
-        <!-- 3. HERO SECTION (Screen-Fit Compact Height, Softened Shadows) -->
-        <section id="heroSliderSection" class="relative min-h-[480px] lg:h-[calc(100vh-116px)] lg:max-h-[640px] flex items-center overflow-hidden bg-slate-950 border-b border-slate-200">
+        <!-- 3. HERO SECTION (Inspired by Reference Layout: Modern Plumber Working, Navy Overlay + Cyan Curve, PlumbingCareHub Content) -->
+        <section id="heroSliderSection" class="relative min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden bg-[#071d38]">
             
-            <!-- Background Image Slides (Fade In/Out Every 3 Seconds) -->
+            <!-- Hero Background Photo (Technician Working on Pipes) -->
             <div class="absolute inset-0 z-0">
-                <!-- Slide 1 (Technician Tipping Hat) -->
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
-                    <img src="assets/images/hero-technician-1.jpg" alt="Licensed Master Plumber On Call" class="w-full h-full object-cover object-right sm:object-center">
+                <img src="assets/images/hero-technician-1.jpg" alt="Licensed Master Plumber On Call" class="w-full h-full object-cover object-right sm:object-[center_right]">
+                
+                <!-- Modern Navy Overlay Gradient with Smooth Fade -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#071d38] via-[#071d38]/85 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#071d38]/80 via-transparent to-transparent"></div>
+                
+                <!-- Dynamic Blue Wave Curve Graphic on Right (Inspired by Reference Image) -->
+                <div class="absolute top-0 right-0 w-80 sm:w-96 md:w-[500px] h-full pointer-events-none opacity-45 mix-blend-screen overflow-hidden">
+                    <svg viewBox="0 0 500 500" class="w-full h-full object-cover" preserveAspectRatio="none">
+                        <path d="M 150,0 Q 340,200 480,500 L 500,500 L 500,0 Z" fill="#0ea5e9" opacity="0.6"/>
+                        <path d="M 230,0 Q 390,230 500,450 L 500,0 Z" fill="#0066f5" opacity="0.8"/>
+                    </svg>
                 </div>
-                <!-- Slide 2 (Master Plumber with Wrench & Copper Pipes) -->
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none">
-                    <img src="assets/images/hero-technician-2.jpg" alt="Emergency Water Pipe & Leak Diagnostic Specialist" class="w-full h-full object-cover object-right sm:object-center">
-                </div>
-                <!-- Slide 3 (Service Plumber with Digital Diagnostic Tools) -->
-                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none">
-                    <img src="assets/images/hero-technician-3.jpg" alt="24/7 Rapid Response Emergency Plumber" class="w-full h-full object-cover object-right sm:object-center">
-                </div>
-
-                <!-- Balanced Contrast Gradient Overlays (Clear Photo + High Text Legibility) -->
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/20 sm:to-transparent"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-slate-950/20"></div>
             </div>
 
-            <!-- Foreground Content (Left-Aligned, Compact Screen Height) -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 lg:py-10 w-full">
+            <!-- Foreground Content (100% Original PlumbingCareHub Content) -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-10 lg:py-14 w-full">
                 <div class="max-w-2xl lg:max-w-3xl">
                     
-                    <!-- Emergency Category Tag -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600 text-white text-[11px] font-black uppercase tracking-wider mb-3 shadow-md">
+                    <!-- Emergency Category Pill Tag -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600 text-white text-[11px] font-black uppercase tracking-wider mb-4 shadow-md">
                         <span class="flex h-2 w-2 relative">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -369,241 +396,481 @@
                         <span>24/7 Emergency Dispatch • 30-45 Min Avg Response</span>
                     </div>
 
-                    <!-- Primary SEO H1 (Upfront Pricing & Emergency Relief) -->
-                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15] mb-3">
-                        Upfront Flat-Rate Pricing — <br>
+                    <!-- Primary SEO H1 (PlumbingCareHub Original Content) -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-4">
+                        Upfront Flat-Rate Pricing 
                         <span class="text-sky-400">You Pay by the Job,</span> Not the Hour
                     </h1>
 
-                    <!-- Reassuring Panic-Relief Copy -->
-                    <p class="text-sm sm:text-base text-slate-200 max-w-xl leading-relaxed mb-4 font-normal">
+                    <!-- Reassuring Panic-Relief Copy (PlumbingCareHub Original Content) -->
+                    <p class="text-sm sm:text-base text-slate-200 max-w-xl leading-relaxed mb-6 font-normal">
                         At <strong class="text-white font-bold">PlumbingCareHub</strong>, our licensed master plumbers are like EMTs for your home's water and sewer systems. Rapid emergency response 24/7 with upfront flat rates and zero overtime fees.
                     </p>
 
-                    <!-- Customer Reviews & Rating Badge (Balanced Contrast & Shadow) -->
-                    <div class="flex items-center gap-3 mb-4 bg-slate-950/60 border border-white/20 rounded-xl px-3.5 py-1.5 w-fit backdrop-blur-sm shadow-md">
+                    <!-- Customer Reviews & Rating Badge -->
+                    <div class="flex items-center gap-3 mb-6 bg-slate-900/60 border border-white/20 rounded-full px-4 py-2 w-fit backdrop-blur-sm shadow-md">
                         <div class="flex items-center gap-1.5">
                             <div class="text-amber-400 text-sm tracking-tighter">★★★★★</div>
                             <span class="text-[11px] font-bold text-white uppercase tracking-wider">Customer Reviews</span>
                         </div>
-                        <div class="h-4 w-px bg-white/25"></div>
+                        <div class="h-3.5 w-px bg-white/25"></div>
                         <div class="flex items-baseline gap-1">
                             <span class="text-sm font-black text-white">4.9 / 5.0</span>
-                            <span class="text-[10px] text-slate-300 font-medium">(1,280+ Ratings)</span>
+                            <span class="text-[11px] text-slate-300 font-medium">(1,280+ Ratings)</span>
                         </div>
                     </div>
 
-                    <!-- Key Benefit Badges (Translucent Cards with Subtle Depth) -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 max-w-lg">
-                        <div class="p-2 bg-slate-950/50 border border-white/15 rounded-lg text-center backdrop-blur-xs shadow-sm">
+                    <!-- Key Benefit Badges (Translucent Pill Cards) -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-6 max-w-xl">
+                        <div class="p-2.5 bg-slate-900/50 border border-white/15 rounded-xl text-center backdrop-blur-xs shadow-sm">
                             <div class="text-sky-400 text-sm sm:text-base font-black">30-45m</div>
-                            <div class="text-[9px] text-slate-300 font-bold uppercase">Avg Response</div>
+                            <div class="text-[10px] text-slate-300 font-bold uppercase">Avg Response</div>
                         </div>
-                        <div class="p-2 bg-slate-950/50 border border-white/15 rounded-lg text-center backdrop-blur-xs shadow-sm">
+                        <div class="p-2.5 bg-slate-900/50 border border-white/15 rounded-xl text-center backdrop-blur-xs shadow-sm">
                             <div class="text-emerald-400 text-sm sm:text-base font-black">$0</div>
-                            <div class="text-[9px] text-slate-300 font-bold uppercase">Overtime Fees</div>
+                            <div class="text-[10px] text-slate-300 font-bold uppercase">Overtime Fees</div>
                         </div>
-                        <div class="p-2 bg-slate-950/50 border border-white/15 rounded-lg text-center backdrop-blur-xs shadow-sm">
+                        <div class="p-2.5 bg-slate-900/50 border border-white/15 rounded-xl text-center backdrop-blur-xs shadow-sm">
                             <div class="text-amber-400 text-sm sm:text-base font-black">100%</div>
-                            <div class="text-[9px] text-slate-300 font-bold uppercase">Master Plumbers</div>
+                            <div class="text-[10px] text-slate-300 font-bold uppercase">Master Plumbers</div>
                         </div>
-                        <div class="p-2 bg-slate-950/50 border border-white/15 rounded-lg text-center backdrop-blur-xs shadow-sm">
+                        <div class="p-2.5 bg-slate-900/50 border border-white/15 rounded-xl text-center backdrop-blur-xs shadow-sm">
                             <div class="text-cyan-400 text-sm sm:text-base font-black">100%</div>
-                            <div class="text-[9px] text-slate-300 font-bold uppercase">Satisfaction</div>
+                            <div class="text-[10px] text-slate-300 font-bold uppercase">Satisfaction</div>
                         </div>
                     </div>
 
-                    <!-- Call-to-Action Row -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 mb-4">
-                        <a href="tel:8005552273" class="inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-gradient-to-r from-red-600 to-emergency-600 hover:from-red-700 hover:to-emergency-700 text-white text-sm sm:text-base font-black rounded-xl shadow-lg shadow-red-600/25 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+                    <!-- Call-to-Action Dual Pill Buttons (Inspired by Reference) -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6">
+                        <a href="tel:8005552273" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base font-extrabold rounded-full shadow-lg shadow-blue-600/30 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                            <svg class="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
                             <span>Call (800) 555-CARE</span>
                         </a>
-                        <button type="button" data-open-modal class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/30 backdrop-blur-sm shadow-md transition whitespace-nowrap text-sm">
+                        <button type="button" data-open-modal class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full border border-white/30 backdrop-blur-sm shadow-md transition whitespace-nowrap text-sm">
                             <span>Get Instant Estimate</span>
-                            <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </button>
                     </div>
 
-                    <!-- Live Zip Checker (Compact Glass Input with Shadow) -->
-                    <div class="p-2.5 bg-slate-950/60 border border-white/15 rounded-xl backdrop-blur-sm max-w-lg shadow-md">
-                        <form id="zipCheckForm" class="flex flex-col sm:flex-row gap-2">
-                            <div class="relative flex-1">
-                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <!-- Live ZIP Checker (Pill Shape with Shadow) -->
+                    <div class="p-2 sm:p-2.5 bg-slate-900/70 border border-white/15 rounded-full backdrop-blur-sm max-w-lg shadow-md">
+                        <form id="zipCheckForm" class="flex items-center gap-2">
+                            <div class="relative flex-1 pl-3">
+                                <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-sky-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 </span>
-                                <input type="text" id="zipCodeInput" placeholder="Enter ZIP code to check live response" maxlength="5" class="w-full pl-8 pr-3 py-1.5 bg-slate-950/70 border border-slate-700/80 rounded-lg text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400">
+                                <input type="text" id="zipCodeInput" placeholder="Enter ZIP code to check live response" maxlength="5" class="w-full pl-6 pr-2 py-1 bg-transparent border-0 text-xs text-white placeholder-slate-400 focus:outline-none">
                             </div>
-                            <button type="submit" class="px-4 py-1.5 bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold rounded-lg transition whitespace-nowrap shadow-sm">
+                            <button type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-full transition whitespace-nowrap shadow-sm">
                                 Check Dispatch
                             </button>
                         </form>
-                        <div id="zipResult" class="mt-1.5 hidden text-xs"></div>
-                    </div>
-
-                    <!-- Slider Dot Indicators (Compact) -->
-                    <div class="flex items-center gap-2 mt-4">
-                        <button type="button" class="hero-dot h-2 w-7 rounded-full bg-red-600 transition-all duration-300" aria-label="Slide 1"></button>
-                        <button type="button" class="hero-dot h-2 w-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slide 2"></button>
-                        <button type="button" class="hero-dot h-2 w-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" aria-label="Slide 3"></button>
-                        <span class="text-[10px] text-slate-400 ml-1.5 font-medium">3s rotation</span>
+                        <div id="zipResult" class="px-3 pb-1 hidden text-xs"></div>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- 4. TRUST & CREDIBILITY STRIP -->
-        <section class="bg-white border-b border-slate-200 py-6">
+        <!-- 4. TRUST & CREDIBILITY BADGES STRIP (Matches Reference Layout: 4 Outline Items) -->
+        <section class="bg-slate-50/70 border-b border-slate-200/80 py-5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center items-center">
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-blue-100 text-brand-600 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center">
+                    
+                    <div class="flex items-center justify-center gap-2.5 sm:gap-3 text-slate-800">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         <div class="text-left">
-                            <span class="block text-sm font-bold text-slate-900">Licensed &amp; Bonded</span>
-                            <span class="block text-xs text-slate-500">Master Plumbers #MP-89412</span>
+                            <span class="block text-xs sm:text-sm font-bold text-slate-900">Licensed &amp; Bonded</span>
+                            <span class="block text-[10px] text-slate-500">Master Plumbers #MP-89412</span>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
+                    <div class="flex items-center justify-center gap-2.5 sm:gap-3 text-slate-800">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div class="text-left">
-                            <span class="block text-sm font-bold text-slate-900">Upfront Flat-Rate</span>
-                            <span class="block text-xs text-slate-500">Zero Hidden Surcharges</span>
+                            <span class="block text-xs sm:text-sm font-bold text-slate-900">Upfront Flat-Rate</span>
+                            <span class="block text-[10px] text-slate-500">Zero Hidden Surcharges</span>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
+                    <div class="flex items-center justify-center gap-2.5 sm:gap-3 text-slate-800">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div class="text-left">
-                            <span class="block text-sm font-bold text-slate-900">24/7/365 Service</span>
-                            <span class="block text-xs text-slate-500">Never Leaves You Waiting</span>
+                            <span class="block text-xs sm:text-sm font-bold text-slate-900">24/7/365 Service</span>
+                            <span class="block text-[10px] text-slate-500">Never Leaves You Waiting</span>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
+                    <div class="flex items-center justify-center gap-2.5 sm:gap-3 text-slate-800">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"></path></svg>
                         <div class="text-left">
-                            <span class="block text-sm font-bold text-slate-900">100% Satisfaction</span>
-                            <span class="block text-xs text-slate-500">Written Labor Guarantee</span>
+                            <span class="block text-xs sm:text-sm font-bold text-slate-900">100% Satisfaction</span>
+                            <span class="block text-[10px] text-slate-500">Written Labor Guarantee</span>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- 5. INTERACTIVE EMERGENCY TRIAGE SECTION (First-Aid Safety Guide) -->
-        <section id="triage" class="py-14 lg:py-20 bg-slate-50 border-b border-slate-200">
+        <!-- 5. OUR SERVICES SECTION (Inspired by Reference: 3-Part Interactive Showcase + Full 6-Card Services Catalog) -->
+        <section id="services" class="py-16 lg:py-24 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Section Header (PlumbingCareHub Content) -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">OUR SPECIALIZED SOLUTIONS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#071d38] tracking-tight">
+                        Comprehensive <span class="text-blue-600">24/7 Emergency</span> Plumbing Services
+                    </h2>
+                    <p class="text-slate-500 text-sm sm:text-base mt-2.5">
+                        From residential homes to commercial facilities, our fully-stocked mobile trucks carry all parts and industrial equipment needed to resolve your crisis on the very first visit.
+                    </p>
+                </div>
+
+                <!-- 3-Panel Interactive Showcase Layout -->
+                <div class="grid lg:grid-cols-12 gap-8 items-center bg-white p-4 sm:p-6 lg:p-8 rounded-3xl border border-slate-100 shadow-[0_10px_35px_rgb(0,0,0,0.03)] mb-14">
+                    
+                    <!-- Left Tab Navigation Column -->
+                    <div class="lg:col-span-4 space-y-2.5">
+                        <button type="button" data-service-key="leak-repair" class="service-tab-btn w-full text-left p-3.5 sm:p-4 rounded-xl font-bold transition flex items-center justify-between bg-blue-600 text-white shadow-lg shadow-blue-500/20">
+                            <div class="flex items-center gap-3">
+                                <span class="tab-icon text-white text-lg">💧</span>
+                                <span class="text-sm font-bold">Burst Pipe &amp; Leak Repair</span>
+                            </div>
+                            <span class="tab-arrow text-sm opacity-100 transition-opacity">&rarr;</span>
+                        </button>
+
+                        <button type="button" data-service-key="pipe-installation" class="service-tab-btn w-full text-left p-3.5 sm:p-4 rounded-xl font-bold transition flex items-center justify-between bg-white text-slate-700 hover:bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-3">
+                                <span class="tab-icon text-blue-600 text-lg">🔧</span>
+                                <span class="text-sm font-bold">Repiping &amp; Pipe Installation</span>
+                            </div>
+                            <span class="tab-arrow text-sm opacity-0 transition-opacity">&rarr;</span>
+                        </button>
+
+                        <button type="button" data-service-key="bathroom-plumbing" class="service-tab-btn w-full text-left p-3.5 sm:p-4 rounded-xl font-bold transition flex items-center justify-between bg-white text-slate-700 hover:bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-3">
+                                <span class="tab-icon text-blue-600 text-lg">🛁</span>
+                                <span class="text-sm font-bold">Bathroom Plumbing &amp; Toilets</span>
+                            </div>
+                            <span class="tab-arrow text-sm opacity-0 transition-opacity">&rarr;</span>
+                        </button>
+
+                        <button type="button" data-service-key="water-heater" class="service-tab-btn w-full text-left p-3.5 sm:p-4 rounded-xl font-bold transition flex items-center justify-between bg-white text-slate-700 hover:bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-3">
+                                <span class="tab-icon text-blue-600 text-lg">♨️</span>
+                                <span class="text-sm font-bold">Water Heater Repair &amp; Installs</span>
+                            </div>
+                            <span class="tab-arrow text-sm opacity-0 transition-opacity">&rarr;</span>
+                        </button>
+
+                        <button type="button" data-service-key="drain-cleaning" class="service-tab-btn w-full text-left p-3.5 sm:p-4 rounded-xl font-bold transition flex items-center justify-between bg-white text-slate-700 hover:bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-3">
+                                <span class="tab-icon text-blue-600 text-lg">🪠</span>
+                                <span class="text-sm font-bold">Drain Cleaning &amp; Hydro-Jetting</span>
+                            </div>
+                            <span class="tab-arrow text-sm opacity-0 transition-opacity">&rarr;</span>
+                        </button>
+                    </div>
+
+                    <!-- Center Preview Image -->
+                    <div class="lg:col-span-4">
+                        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/11] shadow-md border border-slate-100">
+                            <img id="serviceDetailImg" src="assets/images/service-leak-repair.jpg" alt="Emergency Plumbing Diagnostics" class="w-full h-full object-cover transition-all duration-300">
+                        </div>
+                    </div>
+
+                    <!-- Right Service Detail Panel -->
+                    <div class="lg:col-span-4 pl-0 lg:pl-3">
+                        <h3 id="serviceDetailTitle" class="text-2xl font-extrabold text-[#071d38] mb-3">
+                            Leak Repair &amp; Water Diagnostics
+                        </h3>
+                        <p id="serviceDetailDesc" class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
+                            Stop water leaks before they cause structural wood rot, toxic mold, or expensive floor damage. Our electronic acoustic leak detectors pinpoint hidden leaks behind walls and under concrete slabs with zero unnecessary destruction.
+                        </p>
+
+                        <!-- Bullet Points -->
+                        <ul id="serviceDetailBullets" class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-bold text-xs">✓</span>
+                                <span>Instant 30-45 Minute Emergency Response</span>
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-bold text-xs">✓</span>
+                                <span>Long-lasting Copper &amp; PEX Permanent Fixes</span>
+                            </li>
+                            <li class="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-bold text-xs">✓</span>
+                                <span>Transparent Upfront Flat-Rate Pricing</span>
+                            </li>
+                        </ul>
+
+                        <!-- Blue Pill Book Button -->
+                        <button type="button" id="serviceDetailBookBtn" data-open-modal data-service="burst-pipe" class="inline-flex items-center gap-2 px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm rounded-full shadow-sm hover:shadow transition transform hover:-translate-y-0.5">
+                            <span>Book Now</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Complete 6-Card Services Catalog (All Original Content 100% Intact) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Service 1: Burst Pipe Repair -->
+                    <article class="bg-white border border-slate-200/80 hover:border-blue-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Burst &amp; Frozen Pipe Repair</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Ruptured pipes inside walls or under floorboards cause thousands of dollars in water damage in minutes. We deploy electronic leak detection and execute immediate pipe replacement or bypass.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Copper, PEX &amp; PVC pipe specialists</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Non-invasive acoustic leak pinpointing</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Complete pressure testing &amp; dry-out check</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Available 24/7/365</span>
+                            <button type="button" data-open-modal data-service="burst-pipe" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                Dispatch Repair &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Service 2: Emergency Drain Cleaning -->
+                    <article class="bg-white border border-slate-200/80 hover:border-blue-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Emergency Drain Cleaning &amp; Snaking</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Stubborn main line clogs and severe sink, shower, or toilet backups cleared fast. We utilize heavy-duty motorized augers and 4,000 PSI hydro-jetting to completely scour pipe walls clean.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Kitchen, bath &amp; basement floor drains</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Grease, sludge &amp; foreign object removal</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Free video camera inspection included</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Same-Day Guarantee</span>
+                            <button type="button" data-open-modal data-service="clogged-drain" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                Clear My Drain &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Service 3: Water Heater Repair & Replacement -->
+                    <article class="bg-white border border-slate-200/80 hover:border-blue-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657 7.975 7.975 0 01-2.343 5.657z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Water Heater Repair &amp; Installation</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                No hot water or active water heater tank leaking? We service and install both traditional tank heaters and high-efficiency tankless water heaters (Gas, Electric &amp; Hybrid).
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Thermostat, thermocouple &amp; element repair</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Same-day new unit replacement &amp; hauling</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Top brands: Bradford White, Rheem, Rinnai</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Emergency Replacement</span>
+                            <button type="button" data-open-modal data-service="water-heater" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                Restore Hot Water &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Service 4: Sewer Line Backup & Camera Inspection -->
+                    <article class="bg-white border border-slate-200/80 hover:border-blue-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Sewer Line Repair &amp; Camera Inspection</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Raw sewage backing up into your basement or tubs is an urgent health hazard. We insert HD optic sewer cameras to pinpoint tree roots, cracked pipes, or collapses, followed by trenchless or excavation repairs.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> High-definition live video diagnostics</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Trenchless pipe lining &amp; pipe bursting</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Fast root removal &amp; sanitization</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Biohazard Priority</span>
+                            <button type="button" data-open-modal data-service="sewer-backup" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                Inspect Sewer &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Service 5: Toilet, Sink & Fixture Emergencies -->
+                    <article class="bg-white border border-slate-200/80 hover:border-blue-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Overflowing Toilet &amp; Fixture Repairs</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Uncontrollable toilet bowl overflows, failed wax rings, broken shutoff angle valves, and snapped faucet supply lines. We seal leaks, replace damaged valves, and reset bowls immediately.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Emergency flange &amp; wax ring resealing</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Heavy-duty toilet rebuilds &amp; replacement</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Commercial flushometer valve service</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">Fast Containment</span>
+                            <button type="button" data-open-modal data-service="toilet-repair" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                Fix Overflow &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Service 6: Commercial Emergency Plumbing -->
+                    <article class="bg-white border border-slate-200/80 hover:border-blue-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Commercial Plumbing &amp; Grease Traps</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                Restaurants, retail plazas, offices, and multi-family apartments cannot afford business interruption. We specialize in industrial hydro-jetting, grease trap backups, and code-certified backflow repairs.
+                            </p>
+                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Commercial grease interceptors &amp; jetting</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Backflow preventer certified testing</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600 font-bold">✓</span> Priority SLA commercial maintenance contracts</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Commercial SLA</span>
+                            <button type="button" data-open-modal data-service="commercial" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                                Commercial Dispatch &rarr;
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. INTERACTIVE EMERGENCY TRIAGE SECTION (First-Aid Safety Guide - PlumbingCareHub Original Content) -->
+        <section id="triage" class="py-16 lg:py-24 bg-[#f8fbfe] border-t border-b border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-10">
-                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block mb-1">Emergency First-Aid Guide</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">EMERGENCY FIRST-AID GUIDE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#071d38] tracking-tight">
                         Active Plumbing Emergency? What To Do Right Now
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2">
+                    <p class="text-slate-500 text-sm sm:text-base mt-2.5">
                         Click your crisis below for immediate steps to contain water damage while our master technician is en route.
                     </p>
                 </div>
 
                 <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-start">
                     <!-- Selector Tabs -->
-                    <div class="lg:col-span-5 space-y-2.5">
-                        <button type="button" data-triage="burst-pipe" class="triage-tab-btn w-full text-left p-4 rounded-xl border border-blue-600 bg-blue-600 text-white font-bold transition flex items-center justify-between shadow-md">
+                    <div class="lg:col-span-5 space-y-3">
+                        <button type="button" data-triage="burst-pipe" class="triage-tab-btn w-full text-left p-4 rounded-2xl border border-blue-600 bg-blue-600 text-white font-bold transition flex items-center justify-between shadow-md">
                             <div class="flex items-center gap-3">
-                                <span class="p-2 bg-white/20 rounded-lg text-lg">💧</span>
+                                <span class="triage-icon p-2 bg-white/20 rounded-xl text-lg">💧</span>
                                 <div>
                                     <div class="text-sm font-extrabold">Burst Pipe &amp; Gushing Water</div>
                                     <div class="triage-sub text-xs text-blue-100 font-normal">Pipes burst in walls, ceiling, or basement</div>
                                 </div>
                             </div>
-                            <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span class="text-sm font-bold">&rarr;</span>
                         </button>
 
-                        <button type="button" data-triage="sewer-backup" class="triage-tab-btn w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-slate-800 font-bold transition flex items-center justify-between">
+                        <button type="button" data-triage="sewer-backup" class="triage-tab-btn w-full text-left p-4 rounded-2xl border border-slate-200 bg-white text-slate-800 font-bold transition flex items-center justify-between shadow-sm hover:border-blue-300">
                             <div class="flex items-center gap-3">
-                                <span class="p-2 bg-slate-100 rounded-lg text-lg">☣️</span>
+                                <span class="triage-icon p-2 bg-blue-50 rounded-xl text-lg">☣️</span>
                                 <div>
                                     <div class="text-sm font-extrabold text-slate-900">Sewer Line Backup</div>
                                     <div class="triage-sub text-xs text-slate-500 font-normal">Black water, toilet overflow, foul odors</div>
                                 </div>
                             </div>
-                            <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span class="text-sm text-slate-400 font-bold">&rarr;</span>
                         </button>
 
-                        <button type="button" data-triage="water-heater" class="triage-tab-btn w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-slate-800 font-bold transition flex items-center justify-between">
+                        <button type="button" data-triage="water-heater" class="triage-tab-btn w-full text-left p-4 rounded-2xl border border-slate-200 bg-white text-slate-800 font-bold transition flex items-center justify-between shadow-sm hover:border-blue-300">
                             <div class="flex items-center gap-3">
-                                <span class="p-2 bg-slate-100 rounded-lg text-lg">🔥</span>
+                                <span class="triage-icon p-2 bg-blue-50 rounded-xl text-lg">🔥</span>
                                 <div>
                                     <div class="text-sm font-extrabold text-slate-900">Water Heater Failure</div>
                                     <div class="triage-sub text-xs text-slate-500 font-normal">Tank rupture, no hot water, whistling sounds</div>
                                 </div>
                             </div>
-                            <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span class="text-sm text-slate-400 font-bold">&rarr;</span>
                         </button>
 
-                        <button type="button" data-triage="clogged-drain" class="triage-tab-btn w-full text-left p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-slate-800 font-bold transition flex items-center justify-between">
+                        <button type="button" data-triage="clogged-drain" class="triage-tab-btn w-full text-left p-4 rounded-2xl border border-slate-200 bg-white text-slate-800 font-bold transition flex items-center justify-between shadow-sm hover:border-blue-300">
                             <div class="flex items-center gap-3">
-                                <span class="p-2 bg-slate-100 rounded-lg text-lg">🚿</span>
+                                <span class="triage-icon p-2 bg-blue-50 rounded-xl text-lg">🚿</span>
                                 <div>
                                     <div class="text-sm font-extrabold text-slate-900">Severe Clogged Drain</div>
                                     <div class="triage-sub text-xs text-slate-500 font-normal">Multiple slow drains, bubbling sinks, flooding</div>
                                 </div>
                             </div>
-                            <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span class="text-sm text-slate-400 font-bold">&rarr;</span>
                         </button>
                     </div>
 
-                    <!-- Triage Output Display Panel (Clean White Card) -->
+                    <!-- Triage Output Display Panel -->
                     <div class="lg:col-span-7">
-                        <div id="triageDisplay" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-lg">
-                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 pb-4 mb-5">
-                                <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <div id="triageDisplay" class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-4 mb-5">
+                                <h3 class="text-xl font-extrabold text-slate-900 flex items-center gap-2">
                                     <span class="flex h-3 w-3 relative">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
                                     </span>
                                     Burst Pipe &amp; Active Gushing Water
                                 </h3>
-                                <span class="text-xs font-bold px-3 py-1 bg-red-50 text-red-700 border border-red-200 rounded-full tracking-wide">
+                                <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full tracking-wide">
                                     CRITICAL EMERGENCY (30-Min Dispatch)
                                 </span>
                             </div>
-                            <p class="text-sm text-amber-800 font-semibold mb-3 flex items-center gap-2 bg-amber-50 p-2.5 rounded-lg border border-amber-200">
-                                <svg class="w-4 h-4 text-amber-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                            <p class="text-sm text-blue-900 font-semibold mb-3 flex items-center gap-2 bg-blue-50 p-2.5 rounded-xl border border-blue-200">
+                                <svg class="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
                                 Immediate Safety Action Plan Before Plumber Arrives:
                             </p>
                             <ul class="space-y-3 text-sm text-slate-700 mb-6">
                                 <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                                    <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
                                     <span>Locate and shut off your property's <strong>MAIN WATER SHUTOFF VALVE</strong> immediately.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                                    <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
                                     <span>Turn on lowest faucets (garden hose or basement sink) to drain remaining water safely.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                                    <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
                                     <span>Switch off electrical circuit breakers for wet rooms to eliminate electrocution risk.</span>
                                 </li>
                                 <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+                                    <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
                                     <span>Move valuables and take quick photos of damage for insurance claims.</span>
                                 </li>
                             </ul>
-                            <div class="bg-blue-50/70 border border-blue-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
                                 <div class="text-xs text-slate-700">
                                     <span class="font-bold text-slate-900 block">Master technician is on standby for emergency pipe clamp &amp; replacement.</span>
                                     <span>No overtime fees. Upfront flat-rate quote before any repair starts.</span>
                                 </div>
-                                <a href="tel:8005552273" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-all shadow-md hover:shadow-lg text-sm whitespace-nowrap">
+                                <a href="tel:8005552273" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all shadow-md text-sm whitespace-nowrap">
                                     <svg class="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
                                     Call (800) 555-CARE
                                 </a>
@@ -614,236 +881,118 @@
             </div>
         </section>
 
-        <!-- 6. CORE EMERGENCY SERVICES (Comprehensive SEO Semantic Grid) -->
-        <section id="services" class="py-14 lg:py-20 bg-white border-b border-slate-200">
+        <!-- 7. WHY PROPERTY OWNERS TRUST US (Comparison Table & 3-Step Flow - PlumbingCareHub Original Content) -->
+        <section id="why-us" class="py-16 lg:py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block mb-1">Our Specialized Solutions</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                        Comprehensive 24/7 Emergency Plumbing Services
-                    </h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2">
-                        From residential homes to commercial facilities, our fully-stocked mobile trucks carry all parts and industrial equipment needed to resolve your crisis on the very first visit.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    
-                    <!-- Service 1: Burst Pipe Repair -->
-                    <article class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Burst &amp; Frozen Pipe Repair</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Ruptured pipes inside walls or under floorboards cause thousands of dollars in water damage in minutes. We deploy electronic leak detection and execute immediate pipe replacement or bypass.
-                            </p>
-                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> Copper, PEX &amp; PVC pipe specialists</li>
-                                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> Non-invasive acoustic leak pinpointing</li>
-                                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> Complete pressure testing &amp; dry-out check</li>
-                            </ul>
-                        </div>
-                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Available 24/7/365</span>
-                            <button type="button" data-open-modal data-service="burst-pipe" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
-                                Dispatch Repair &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Service 2: Emergency Drain Cleaning -->
-                    <article class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Emergency Drain Cleaning &amp; Snaking</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Stubborn main line clogs and severe sink, shower, or toilet backups cleared fast. We utilize heavy-duty motorized augers and 4,000 PSI hydro-jetting to completely scour pipe walls clean.
-                            </p>
-                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Kitchen, bath &amp; basement floor drains</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Grease, sludge &amp; foreign object removal</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-600 font-bold">✓</span> Free video camera inspection included</li>
-                            </ul>
-                        </div>
-                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Same-Day Guarantee</span>
-                            <button type="button" data-open-modal data-service="clogged-drain" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
-                                Clear My Drain &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Service 3: Water Heater Repair & Replacement -->
-                    <article class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657 7.975 7.975 0 01-2.343 5.657z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Water Heater Repair &amp; Installation</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                No hot water or active water heater tank leaking? We service and install both traditional tank heaters and high-efficiency tankless water heaters (Gas, Electric &amp; Hybrid).
-                            </p>
-                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Thermostat, thermocouple &amp; element repair</li>
-                                <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Same-day new unit replacement &amp; hauling</li>
-                                <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Top brands: Bradford White, Rheem, Rinnai</li>
-                            </ul>
-                        </div>
-                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Emergency Replacement</span>
-                            <button type="button" data-open-modal data-service="water-heater" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
-                                Restore Hot Water &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Service 4: Sewer Line Backup & Camera Inspection -->
-                    <article class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Sewer Line Repair &amp; Camera Inspection</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Raw sewage backing up into your basement or tubs is an urgent health hazard. We insert HD optic sewer cameras to pinpoint tree roots, cracked pipes, or collapses, followed by trenchless or excavation repairs.
-                            </p>
-                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-purple-600 font-bold">✓</span> High-definition live video diagnostics</li>
-                                <li class="flex items-center gap-2"><span class="text-purple-600 font-bold">✓</span> Trenchless pipe lining &amp; pipe bursting</li>
-                                <li class="flex items-center gap-2"><span class="text-purple-600 font-bold">✓</span> Fast root removal &amp; sanitization</li>
-                            </ul>
-                        </div>
-                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">Biohazard Priority</span>
-                            <button type="button" data-open-modal data-service="sewer-backup" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
-                                Inspect Sewer &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Service 5: Toilet, Sink & Fixture Emergencies -->
-                    <article class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Overflowing Toilet &amp; Fixture Repairs</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Uncontrollable toilet bowl overflows, failed wax rings, broken shutoff angle valves, and snapped faucet supply lines. We seal leaks, replace damaged valves, and reset bowls immediately.
-                            </p>
-                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Emergency flange &amp; wax ring resealing</li>
-                                <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Heavy-duty toilet rebuilds &amp; replacement</li>
-                                <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Commercial flushometer valve service</li>
-                            </ul>
-                        </div>
-                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Fast Containment</span>
-                            <button type="button" data-open-modal data-service="toilet-repair" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
-                                Fix Overflow &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Service 6: Commercial Emergency Plumbing -->
-                    <article class="bg-white border border-slate-200 hover:border-brand-500 rounded-2xl p-6 transition duration-200 hover:shadow-xl flex flex-col justify-between group shadow-sm">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Commercial Plumbing &amp; Grease Traps</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Restaurants, retail plazas, offices, and multi-family apartments cannot afford business interruption. We specialize in industrial hydro-jetting, grease trap backups, and code-certified backflow repairs.
-                            </p>
-                            <ul class="text-xs text-slate-700 space-y-2 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-rose-600 font-bold">✓</span> Commercial grease interceptors &amp; jetting</li>
-                                <li class="flex items-center gap-2"><span class="text-rose-600 font-bold">✓</span> Backflow preventer certified testing</li>
-                                <li class="flex items-center gap-2"><span class="text-rose-600 font-bold">✓</span> Priority SLA commercial maintenance contracts</li>
-                            </ul>
-                        </div>
-                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <span class="text-xs font-bold text-brand-700 bg-brand-50 px-2 py-0.5 rounded">Commercial SLA</span>
-                            <button type="button" data-open-modal data-service="commercial" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
-                                Commercial Dispatch &rarr;
-                            </button>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. WHY PROPERTY OWNERS TRUST US (Comparison Table & 3-Step Flow) -->
-        <section id="why-us" class="py-14 lg:py-20 bg-slate-50 border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block mb-1">The PlumbingCareHub Standard</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">THE PLUMBINGCAREHUB STANDARD</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#071d38] tracking-tight">
                         Why We Outperform Typical Plumbing Contractors
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2">
+                    <p class="text-slate-500 text-sm sm:text-base mt-2.5">
                         When disaster strikes, you need clear pricing, true master craftsmanship, and zero gimmicks. Here is how we compare.
                     </p>
                 </div>
 
-                <!-- Comparison Table (Clean White Card Layout) -->
-                <div class="overflow-x-auto shadow-sm rounded-2xl border border-slate-200 bg-white">
+                <!-- 4 Highlight Cards Inspired by Reference -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 text-center hover:shadow-xl hover:border-blue-200 transition-all duration-200 shadow-sm flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-base font-extrabold text-[#071d38] mb-1.5">24/7 Rapid Dispatch</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Always here when you need us. Average arrival in 30 to 45 minutes guaranteed.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 text-center hover:shadow-xl hover:border-blue-200 transition-all duration-200 shadow-sm flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-base font-extrabold text-[#071d38] mb-1.5">Licensed Master Plumbers</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            State-licensed, drug-tested, and background-vetted professionals on every job.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 text-center hover:shadow-xl hover:border-blue-200 transition-all duration-200 shadow-sm flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-base font-extrabold text-[#071d38] mb-1.5">Upfront Flat-Rate Pricing</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Quoted before work begins. No open-ended hourly billing or surprise fees.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-slate-100 rounded-2xl p-6 text-center hover:shadow-xl hover:border-blue-200 transition-all duration-200 shadow-sm flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                        <h3 class="text-base font-extrabold text-[#071d38] mb-1.5">100% Satisfaction</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Full written labor guarantee and complete property cleanup after every repair.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Comparison Table (PlumbingCareHub Original Content) -->
+                <div class="overflow-x-auto shadow-sm rounded-3xl border border-slate-200 bg-white mb-16">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="border-b border-slate-200 bg-slate-100/70 text-xs uppercase tracking-wider">
+                            <tr class="border-b border-slate-200 bg-slate-50/70 text-xs uppercase tracking-wider">
                                 <th class="p-4 sm:p-5 text-slate-600 font-bold">Service Standards</th>
-                                <th class="p-4 sm:p-5 bg-blue-50 text-brand-800 font-black text-sm border-l border-r border-blue-200">
+                                <th class="p-4 sm:p-5 bg-blue-50 text-blue-900 font-black text-sm border-l border-r border-blue-200">
                                     <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-brand-600"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
                                         PlumbingCareHub
                                     </div>
                                 </th>
                                 <th class="p-4 sm:p-5 text-slate-500 font-semibold">Average Local Plumber</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-200 text-sm">
+                        <tbody class="divide-y divide-slate-100 text-sm">
                             <tr>
                                 <td class="p-4 sm:p-5 font-bold text-slate-900">Emergency Dispatch Speed</td>
-                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-emerald-700 border-l border-r border-blue-100">
+                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-blue-700 border-l border-r border-blue-100">
                                     ✓ Average 30-45 Minute Rapid Arrival
                                 </td>
                                 <td class="p-4 sm:p-5 text-slate-500">4 to 24 hours, often next-day voicemail</td>
                             </tr>
                             <tr>
                                 <td class="p-4 sm:p-5 font-bold text-slate-900">Pricing Model</td>
-                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-emerald-700 border-l border-r border-blue-100">
+                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-blue-700 border-l border-r border-blue-100">
                                     ✓ 100% Upfront Flat-Rate (Quoted Before Work)
                                 </td>
                                 <td class="p-4 sm:p-5 text-slate-500">Open-ended hourly billing + parts markup</td>
                             </tr>
                             <tr>
                                 <td class="p-4 sm:p-5 font-bold text-slate-900">Nights &amp; Weekend Overtime Fees</td>
-                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-emerald-700 border-l border-r border-blue-100">
+                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-blue-700 border-l border-r border-blue-100">
                                     ✓ $0 Overtime Penalty — Same Rate 24/7/365
                                 </td>
                                 <td class="p-4 sm:p-5 text-slate-500">1.5x - 2.5x double rates after 5 PM &amp; weekends</td>
                             </tr>
                             <tr>
                                 <td class="p-4 sm:p-5 font-bold text-slate-900">Technician Qualifications</td>
-                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-emerald-700 border-l border-r border-blue-100">
+                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-blue-700 border-l border-r border-blue-100">
                                     ✓ State-Licensed, Vetted &amp; Drug-Tested Masters
                                 </td>
                                 <td class="p-4 sm:p-5 text-slate-500">Unvetted apprentices or sub-contractors</td>
                             </tr>
                             <tr>
                                 <td class="p-4 sm:p-5 font-bold text-slate-900">Truck Equipment &amp; Inventory</td>
-                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-emerald-700 border-l border-r border-blue-100">
+                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-blue-700 border-l border-r border-blue-100">
                                     ✓ Mobile Warehouse (Fully Stocked For 1-Trip Fixes)
                                 </td>
                                 <td class="p-4 sm:p-5 text-slate-500">Leaves job site to buy parts at supply house</td>
                             </tr>
                             <tr>
                                 <td class="p-4 sm:p-5 font-bold text-slate-900">Labor &amp; Parts Warranty</td>
-                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-emerald-700 border-l border-r border-blue-100">
+                                <td class="p-4 sm:p-5 bg-blue-50/50 font-bold text-blue-700 border-l border-r border-blue-100">
                                     ✓ 100% Satisfaction Written Guarantee
                                 </td>
                                 <td class="p-4 sm:p-5 text-slate-500">Limited or 30-day informal verbal promises</td>
@@ -853,17 +1002,17 @@
                 </div>
 
                 <!-- 3 Simple Steps How It Works -->
-                <div class="mt-16">
+                <div>
                     <div class="text-center max-w-2xl mx-auto mb-10">
-                        <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block mb-1">Streamlined Process</span>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">STREAMLINED PROCESS</span>
                         <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
                             3 Simple Steps to Emergency Relief
                         </h3>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-6">
-                        <div class="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm">
-                            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-md shadow-brand-600/20">
+                        <div class="bg-white border border-slate-200 rounded-3xl p-6 text-center shadow-sm">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-md shadow-blue-600/20">
                                 1
                             </div>
                             <h4 class="text-lg font-bold text-slate-900 mb-2">Call or Submit Alert</h4>
@@ -872,8 +1021,8 @@
                             </p>
                         </div>
 
-                        <div class="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm">
-                            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-md shadow-brand-600/20">
+                        <div class="bg-white border border-slate-200 rounded-3xl p-6 text-center shadow-sm">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-md shadow-blue-600/20">
                                 2
                             </div>
                             <h4 class="text-lg font-bold text-slate-900 mb-2">Diagnosis &amp; Flat Quote</h4>
@@ -882,8 +1031,8 @@
                             </p>
                         </div>
 
-                        <div class="bg-white border border-slate-200 rounded-2xl p-6 text-center shadow-sm">
-                            <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-md shadow-emerald-600/20">
+                        <div class="bg-white border border-slate-200 rounded-3xl p-6 text-center shadow-sm">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-md shadow-blue-600/20">
                                 3
                             </div>
                             <h4 class="text-lg font-bold text-slate-900 mb-2">Rapid Repair &amp; Clean-Up</h4>
@@ -897,73 +1046,75 @@
             </div>
         </section>
 
-        <!-- 8. EXCLUSIVE ONLINE COUPONS & VALUE OFFERS -->
-        <section id="pricing" class="py-14 lg:py-20 bg-white border-b border-slate-200">
+        <!-- 8. EXCLUSIVE ONLINE COUPONS & VALUE OFFERS (PlumbingCareHub Original Content) -->
+        <section id="pricing" class="py-16 lg:py-20 bg-[#f8fbfe] border-t border-b border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest block mb-1">Direct Online Savings</span>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">DIRECT ONLINE SAVINGS</span>
                     <h2 class="text-3xl font-black text-slate-900">Special Emergency Service Coupons</h2>
                     <p class="text-slate-600 text-sm mt-1">Mention code to your technician or online booking for instant credit at time of service.</p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Coupon 1 -->
-                    <div class="bg-slate-50 border-2 border-dashed border-brand-500 rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="bg-white border-2 border-dashed border-blue-400 rounded-3xl p-6 flex flex-col justify-between shadow-sm">
                         <div>
-                            <div class="text-xs uppercase font-extrabold text-brand-700 tracking-wider mb-1">Coupon Code: EMER50</div>
+                            <div class="text-xs uppercase font-extrabold text-blue-600 tracking-wider mb-1">Coupon Code: EMER50</div>
                             <div class="text-3xl font-black text-slate-900 mb-2">$50 OFF</div>
                             <div class="text-sm font-bold text-slate-800 mb-2">Any Emergency Plumbing Repair</div>
                             <p class="text-xs text-slate-600 leading-relaxed">
                                 Valid on all emergency burst pipe repairs, leak repairs, and major fixture replacements. Minimum job applies.
                             </p>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                             <span class="text-[11px] text-slate-500">Expires: End of Month</span>
-                            <button type="button" data-open-modal class="text-xs font-bold text-brand-600 hover:text-brand-800">Claim Offer &rarr;</button>
+                            <button type="button" data-open-modal class="text-xs font-bold text-blue-600 hover:text-blue-800">Claim Offer &rarr;</button>
                         </div>
                     </div>
 
                     <!-- Coupon 2 -->
-                    <div class="bg-slate-50 border-2 border-dashed border-emerald-500 rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="bg-white border-2 border-dashed border-blue-400 rounded-3xl p-6 flex flex-col justify-between shadow-sm">
                         <div>
-                            <div class="text-xs uppercase font-extrabold text-emerald-700 tracking-wider mb-1">Coupon Code: DRAIN75</div>
+                            <div class="text-xs uppercase font-extrabold text-blue-600 tracking-wider mb-1">Coupon Code: DRAIN75</div>
                             <div class="text-3xl font-black text-slate-900 mb-2">$75 OFF</div>
                             <div class="text-sm font-bold text-slate-800 mb-2">Hydro-Jetting &amp; Main Sewer Snaking</div>
                             <p class="text-xs text-slate-600 leading-relaxed">
                                 Complete mainline clearing plus a complimentary high-definition video camera pipe scan.
                             </p>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                             <span class="text-[11px] text-slate-500">Expires: End of Month</span>
-                            <button type="button" data-open-modal class="text-xs font-bold text-emerald-600 hover:text-emerald-800">Claim Offer &rarr;</button>
+                            <button type="button" data-open-modal class="text-xs font-bold text-blue-600 hover:text-blue-800">Claim Offer &rarr;</button>
                         </div>
                     </div>
 
                     <!-- Coupon 3 -->
-                    <div class="bg-slate-50 border-2 border-dashed border-amber-500 rounded-2xl p-6 flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                    <div class="bg-white border-2 border-dashed border-blue-400 rounded-3xl p-6 flex flex-col justify-between shadow-sm sm:col-span-2 lg:col-span-1">
                         <div>
-                            <div class="text-xs uppercase font-extrabold text-amber-700 tracking-wider mb-1">Coupon Code: WATER100</div>
+                            <div class="text-xs uppercase font-extrabold text-blue-600 tracking-wider mb-1">Coupon Code: WATER100</div>
                             <div class="text-3xl font-black text-slate-900 mb-2">$100 OFF</div>
                             <div class="text-sm font-bold text-slate-800 mb-2">Water Heater Replacement</div>
                             <p class="text-xs text-slate-600 leading-relaxed">
                                 Applies to any traditional tank or tankless energy-efficient water heater replacement &amp; haul-away.
                             </p>
                         </div>
-                        <div class="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                             <span class="text-[11px] text-slate-500">Expires: End of Month</span>
-                            <button type="button" data-open-modal class="text-xs font-bold text-amber-600 hover:text-amber-800">Claim Offer &rarr;</button>
+                            <button type="button" data-open-modal class="text-xs font-bold text-blue-600 hover:text-blue-800">Claim Offer &rarr;</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 9. REAL CUSTOMER REVIEWS (SEO Social Proof) -->
-        <section id="reviews" class="py-14 lg:py-20 bg-slate-50 border-b border-slate-200">
+        <!-- 9. REAL CUSTOMER REVIEWS (PlumbingCareHub Original Content) -->
+        <section id="reviews" class="py-16 lg:py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-2">
-                        <span class="text-amber-600">★★★★★</span>
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-800 text-xs font-bold mb-2">
+                        <span class="text-amber-500">★★★★★</span>
                         <span>4.9 / 5.0 Rating Across 1,280+ Verified Reviews</span>
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -975,214 +1126,243 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
-                    <!-- Review 1 -->
-                    <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+                    <!-- Review 1: David Washington -->
+                    <div class="bg-white border border-slate-100 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="text-amber-500 text-base">★★★★★</div>
-                                <span class="text-[11px] text-slate-500 font-semibold">Verified Google Review</span>
-                            </div>
+                            <div class="text-blue-600 text-3xl font-black leading-none mb-3">““</div>
                             <p class="text-sm text-slate-700 italic mb-6 leading-relaxed">
                                 "Our upstairs master bath pipe burst at 1:30 AM on a freezing Sunday. Water was gushing through our kitchen light fixtures! PlumbingCareHub had a technician at our door in 32 minutes. He isolated the leak, replaced the split copper section, and walked us through cleanup. No overtime gouging!"
                             </p>
                         </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center text-sm">
-                                DW
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">
+                                    DW
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-slate-900">David Washington</span>
+                                    <span class="block text-xs text-slate-500">Homeowner • Burst Pipe Emergency</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="block text-sm font-bold text-slate-900">David Washington</span>
-                                <span class="block text-xs text-slate-500">Homeowner • Burst Pipe Emergency</span>
-                            </div>
+                            <div class="text-amber-400 text-xs tracking-tighter">★★★★★</div>
                         </div>
                     </div>
 
-                    <!-- Review 2 -->
-                    <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+                    <!-- Review 2: Sarah Chen -->
+                    <div class="bg-white border border-slate-100 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="text-amber-500 text-base">★★★★★</div>
-                                <span class="text-[11px] text-slate-500 font-semibold">Verified Google Review</span>
-                            </div>
+                            <div class="text-blue-600 text-3xl font-black leading-none mb-3">““</div>
                             <p class="text-sm text-slate-700 italic mb-6 leading-relaxed">
                                 "Our restaurant's main sewer backed up on a Friday dinner rush. Another plumbing company told us they couldn't come until Monday morning. PlumbingCareHub dispatched their heavy hydro-jetting truck within 40 minutes. They cleared tree roots and saved our entire weekend revenue. Lifesavers!"
                             </p>
                         </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">
-                                SC
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">
+                                    SC
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-slate-900">Sarah Chen</span>
+                                    <span class="block text-xs text-slate-500">General Manager • Commercial Kitchen</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="block text-sm font-bold text-slate-900">Sarah Chen</span>
-                                <span class="block text-xs text-slate-500">General Manager • Commercial Kitchen</span>
-                            </div>
+                            <div class="text-amber-400 text-xs tracking-tighter">★★★★★</div>
                         </div>
                     </div>
 
-                    <!-- Review 3 -->
-                    <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+                    <!-- Review 3: Robert & Karen Miller -->
+                    <div class="bg-white border border-slate-100 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="text-amber-500 text-base">★★★★★</div>
-                                <span class="text-[11px] text-slate-500 font-semibold">Verified Google Review</span>
-                            </div>
+                            <div class="text-blue-600 text-3xl font-black leading-none mb-3">““</div>
                             <p class="text-sm text-slate-700 italic mb-6 leading-relaxed">
                                 "50-gallon water heater completely ruptured in our basement. Master technician Marcus arrived quickly, safely capped the lines, gave us an exact upfront price, and had a brand new Rheem tank installed and producing steaming hot water the same afternoon. Incredibly professional."
                             </p>
                         </div>
-                        <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-sm">
-                                RM
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">
+                                    RM
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-slate-900">Robert &amp; Karen Miller</span>
+                                    <span class="block text-xs text-slate-500">Homeowners • Water Heater Replacement</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="block text-sm font-bold text-slate-900">Robert &amp; Karen Miller</span>
-                                <span class="block text-xs text-slate-500">Homeowners • Water Heater Replacement</span>
-                            </div>
+                            <div class="text-amber-400 text-xs tracking-tighter">★★★★★</div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- 10. FREQUENTLY ASKED QUESTIONS (Accordion + Structured SEO Content) -->
-        <section id="faq" class="py-14 lg:py-20 bg-white border-b border-slate-200">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest block mb-1">Got Questions?</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+        <!-- 10. FREQUENTLY ASKED QUESTIONS (PlumbingCareHub Original Content with 2-Column Accordion + Visual Graphic) -->
+        <section id="faq" class="py-16 lg:py-24 bg-[#f8fbfe] border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">GOT QUESTIONS?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#071d38] tracking-tight">
                         Frequently Asked Emergency Plumbing Questions
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2">
+                    <p class="text-slate-500 text-sm sm:text-base mt-2.5">
                         Everything you need to know about our 24/7 emergency dispatch, response times, and upfront pricing.
                     </p>
                 </div>
 
-                <div class="space-y-3.5">
-                    <!-- FAQ 1 -->
-                    <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition">
-                        <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-brand-600">
-                            <span class="text-base sm:text-lg">How quickly can a PlumbingCareHub emergency plumber arrive?</span>
-                            <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
-                            Our emergency response arrival time averages <strong>30 to 45 minutes</strong>. We maintain localized mobile units stationed throughout the metropolitan area loaded with all necessary industrial tools, camera inspection snakes, and pipe inventory ready for instant deployment.
+                <div class="grid lg:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left Column: FAQ Accordion (+ and − Toggle Matching Reference Design) -->
+                    <div class="lg:col-span-7 space-y-3">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition shadow-sm">
+                            <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-[#071d38] hover:text-blue-600">
+                                <span class="text-sm sm:text-base">How quickly can a PlumbingCareHub emergency plumber arrive?</span>
+                                <span class="faq-toggle-icon text-lg sm:text-xl font-bold text-blue-600 shrink-0">−</span>
+                            </button>
+                            <div class="faq-content px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Our emergency response arrival time averages <strong>30 to 45 minutes</strong>. We maintain localized mobile units stationed throughout the metropolitan area loaded with all necessary industrial tools, camera inspection snakes, and pipe inventory ready for instant deployment.
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition shadow-sm">
+                            <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-[#071d38] hover:text-blue-600">
+                                <span class="text-sm sm:text-base">Do you charge extra overtime fees for nights, weekends, or holidays?</span>
+                                <span class="faq-toggle-icon text-lg sm:text-xl font-bold text-blue-600 shrink-0">+</span>
+                            </button>
+                            <div class="faq-content hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                <strong>No.</strong> Unlike traditional contractors who hit panicked homeowners with double or triple overtime rates after 5 PM, PlumbingCareHub operates on true upfront flat-rate pricing. The flat-rate quote you approve before work begins is the exact amount you pay—whether it is 2:00 PM on Tuesday or 3:00 AM on Sunday morning.
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition shadow-sm">
+                            <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-[#071d38] hover:text-blue-600">
+                                <span class="text-sm sm:text-base">What should I do immediately while waiting for the plumber to arrive?</span>
+                                <span class="faq-toggle-icon text-lg sm:text-xl font-bold text-blue-600 shrink-0">+</span>
+                            </button>
+                            <div class="faq-content hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Your number one priority is stopping incoming water. Turn off your main water shutoff valve (usually located where the main pipe enters your basement, garage, or utility closet). If water is touching electrical sockets or appliances, immediately turn off the breaker. Avoid pouring store-bought chemical drain cleaners down backups.
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition shadow-sm">
+                            <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-[#071d38] hover:text-blue-600">
+                                <span class="text-sm sm:text-base">Are your plumbers licensed, insured, and background-checked?</span>
+                                <span class="faq-toggle-icon text-lg sm:text-xl font-bold text-blue-600 shrink-0">+</span>
+                            </button>
+                            <div class="faq-content hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Yes, absolutely 100%. Every technician representing PlumbingCareHub is a fully licensed Journeyman or Master Plumber. All technicians undergo strict criminal background verification and randomized drug screenings, and carry multi-million dollar general liability and property damage coverage.
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition shadow-sm">
+                            <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-[#071d38] hover:text-blue-600">
+                                <span class="text-sm sm:text-base">Do you handle commercial properties as well as homes?</span>
+                                <span class="faq-toggle-icon text-lg sm:text-xl font-bold text-blue-600 shrink-0">+</span>
+                            </button>
+                            <div class="faq-content hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Yes. We provide 24/7 dedicated commercial plumbing services for restaurants, retail storefronts, office parks, industrial complexes, and multi-tenant residential complexes. We have specialized hydro-jetters, backflow certification tools, and grease trap emergency maintenance capabilities.
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition shadow-sm">
+                            <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-[#071d38] hover:text-blue-600">
+                                <span class="text-sm sm:text-base">How does your flat-rate upfront pricing work?</span>
+                                <span class="faq-toggle-icon text-lg sm:text-xl font-bold text-blue-600 shrink-0">+</span>
+                            </button>
+                            <div class="faq-content hidden px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                When our technician arrives, they conduct an immediate diagnostic inspection of the issue. They then present you with an itemized, transparent flat-rate quote from our standardized pricing matrix. If you choose to proceed, that agreed price is all you pay, regardless of how long the job takes. No surprise bills guaranteed.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Visual Faucet Water Droplet Graphic -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm">
+                            <div class="absolute inset-0 bg-sky-200/50 rounded-full blur-3xl pointer-events-none"></div>
+                            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-white aspect-square flex items-center justify-center p-2">
+                                <img src="assets/images/faucet-water-drop.jpg" alt="Water diagnostics faucet with droplet splash" class="w-full h-full object-contain">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- FAQ 2 -->
-                    <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition">
-                        <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-brand-600">
-                            <span class="text-base sm:text-lg">Do you charge extra overtime fees for nights, weekends, or holidays?</span>
-                            <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
-                            <strong>No.</strong> Unlike traditional contractors who hit panicked homeowners with double or triple overtime rates after 5 PM, PlumbingCareHub operates on true upfront flat-rate pricing. The flat-rate quote you approve before work begins is the exact amount you pay—whether it is 2:00 PM on Tuesday or 3:00 AM on Sunday morning.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition">
-                        <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-brand-600">
-                            <span class="text-base sm:text-lg">What should I do immediately while waiting for the plumber to arrive?</span>
-                            <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
-                            Your number one priority is stopping incoming water. Turn off your main water shutoff valve (usually located where the main pipe enters your basement, garage, or utility closet). If water is touching electrical sockets or appliances, immediately turn off the breaker. Avoid pouring store-bought chemical drain cleaners down backups, as harsh acids can heat up and damage piping or spray onto technicians.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition">
-                        <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-brand-600">
-                            <span class="text-base sm:text-lg">Are your plumbers licensed, insured, and background-checked?</span>
-                            <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
-                            Yes, absolutely 100%. Every technician representing PlumbingCareHub is a fully licensed Journeyman or Master Plumber. All technicians undergo strict criminal background verification and randomized drug screenings, and carry multi-million dollar general liability and property damage coverage for your peace of mind.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 5 -->
-                    <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition">
-                        <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-brand-600">
-                            <span class="text-base sm:text-lg">Do you handle commercial properties as well as homes?</span>
-                            <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
-                            Yes. We provide 24/7 dedicated commercial plumbing services for restaurants, retail storefronts, office parks, industrial complexes, and multi-tenant residential complexes. We have specialized hydro-jetters, backflow certification tools, and grease trap emergency maintenance capabilities.
-                        </div>
-                    </div>
-
-                    <!-- FAQ 6 -->
-                    <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition">
-                        <button type="button" class="faq-trigger w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-brand-600">
-                            <span class="text-base sm:text-lg">How does your flat-rate upfront pricing work?</span>
-                            <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-content hidden px-4 sm:px-5 pb-5 text-sm text-slate-600 leading-relaxed">
-                            When our technician arrives, they conduct an immediate diagnostic inspection of the issue. They then present you with an itemized, transparent flat-rate quote from our standardized pricing matrix. If you choose to proceed, that agreed price is all you pay, regardless of how long the job takes or unforeseen challenges. No surprise bills guaranteed.
-                        </div>
-                    </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- 11. FINAL HIGH-CONVERSION CTA BANNER -->
-        <section class="py-14 lg:py-20 bg-gradient-to-r from-red-700 via-emergency-600 to-red-800 text-white relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- 11. FINAL HIGH-CONVERSION CTA BANNER (Exact Match to User's Uploaded Screenshot) -->
+        <section class="py-8 sm:py-12 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="relative bg-gradient-to-r from-[#0057d9] via-[#0066f5] to-[#0052cc] rounded-2xl sm:rounded-3xl px-6 sm:px-10 py-6 sm:py-7 text-white shadow-xl shadow-blue-600/20 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-5 border border-white/20">
+                    
+                    <!-- Water Splash Graphic on Left (Exact Match to Screenshot) -->
+                    <div class="absolute left-0 top-0 bottom-0 w-36 sm:w-52 md:w-64 lg:w-72 pointer-events-none select-none overflow-hidden z-0">
+                        <img src="assets/images/banner.jpg" alt="Water Splash" class="w-full h-full object-cover object-left filter brightness-110 contrast-110">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0066f5]"></div>
+                    </div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-black/25 text-amber-200 text-xs font-bold uppercase tracking-wider mb-4">
-                    Immediate 24/7 Emergency Assistance
-                </span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4">
-                    Don't Let A Plumbing Emergency Ruin Your Home
-                </h2>
-                <p class="text-base sm:text-lg text-red-100 max-w-2xl mx-auto mb-8">
-                    Our master plumbers are on standby with fully-stocked trucks ready to roll to your location right now. Zero overtime fees. Fast arrival.
-                </p>
+                    <!-- Left / Center Content (Original PlumbingCareHub Text in Sleek Layout) -->
+                    <div class="relative z-10 max-w-2xl text-center md:text-left pl-0 md:pl-32 lg:pl-44">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                            Don't Let A Plumbing Emergency Ruin Your Home
+                        </h2>
+                        <p class="text-xs sm:text-sm text-blue-100 font-medium mt-1 leading-relaxed">
+                            Our master plumbers are on standby with fully-stocked trucks ready to roll to your location right now. Zero overtime fees. Fast arrival.
+                        </p>
+                    </div>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:8005552273" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 text-red-700 text-lg font-black rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
-                        <svg class="w-6 h-6 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
-                        Call (800) 555-CARE (24/7)
-                    </a>
-                    <button type="button" data-open-modal class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-red-950/80 hover:bg-red-950 text-white font-bold rounded-xl border border-red-300/40 transition">
-                        <span>Book Online Now</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </button>
+                    <!-- Right Side Action: White Pill Button with Right Arrow -->
+                    <div class="relative z-10 shrink-0">
+                        <button type="button" data-open-modal class="inline-flex items-center gap-2.5 px-7 py-3 bg-white hover:bg-slate-50 text-[#0062eb] font-bold rounded-full shadow-lg transition transform hover:-translate-y-0.5 text-xs sm:text-sm whitespace-nowrap">
+                            <span>Get a Quote</span>
+                            <svg class="w-4 h-4 text-[#0062eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </div>
+
                 </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- 12. SEMANTIC FOOTER (Classic Trust Navy) -->
-    <footer class="bg-slate-900 text-slate-300 text-xs pt-14 pb-24 md:pb-14">
+    <!-- 12. SEMANTIC FOOTER (Classic Trust Navy, All Original PlumbingCareHub Links Preserved) -->
+    <footer class="bg-[#07182c] text-slate-300 text-xs pt-16 pb-24 md:pb-14 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                
                 <!-- Col 1: Brand & Contact -->
                 <div class="lg:col-span-2 space-y-4">
                     <a href="/" class="flex items-center gap-2.5">
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">
+                        <div class="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold">
                             P
                         </div>
-                        <span class="text-xl font-black text-white">Plumbing<span class="text-brand-500">Care</span>Hub</span>
+                        <span class="text-xl font-black text-white">Plumbing<span class="text-blue-500">Care</span>Hub</span>
                     </a>
                     <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
                         PlumbingCareHub delivers 24/7 emergency and routine plumbing solutions with licensed master technicians, upfront flat-rate pricing, and zero overtime charges.
                     </p>
                     <div class="space-y-1.5 text-xs text-slate-300">
                         <div class="flex items-center gap-2">
-                            <span class="text-brand-400 font-bold">Hotline:</span>
+                            <span class="text-sky-400 font-bold">Hotline:</span>
                             <a href="tel:8005552273" class="hover:text-white font-semibold">(800) 555-CARE / (800) 555-2273</a>
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="text-brand-400 font-bold">Hours:</span>
+                            <span class="text-sky-400 font-bold">Hours:</span>
                             <span>Open 24 Hours / 7 Days a Week / 365 Days</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="text-brand-400 font-bold">License:</span>
+                            <span class="text-sky-400 font-bold">License:</span>
                             <span>State Master Plumber Lic #MP-89412 • Fully Bonded &amp; Insured</span>
                         </div>
                     </div>
@@ -1226,6 +1406,7 @@
                         <li>All Surrounding County Areas</li>
                     </ul>
                 </div>
+
             </div>
 
             <!-- Bottom Copyright & Legal Disclaimer -->
@@ -1240,32 +1421,32 @@
         </div>
     </footer>
 
-    <!-- 13. STICKY MOBILE EMERGENCY CALL BAR (High Conversion Rate) -->
+    <!-- 13. STICKY MOBILE EMERGENCY CALL BAR -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 p-2.5 shadow-2xl">
         <div class="flex items-center gap-2">
-            <a href="tel:8005552273" class="flex-1 inline-flex items-center justify-center gap-2 py-3 bg-red-600 active:bg-red-700 text-white font-black rounded-xl shadow-md text-sm">
+            <a href="tel:8005552273" class="flex-1 inline-flex items-center justify-center gap-2 py-3 bg-blue-600 text-white font-black rounded-full shadow-md text-sm">
                 <svg class="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
                 <span>Call (800) 555-CARE</span>
             </a>
-            <button type="button" data-open-modal class="px-4 py-3 bg-slate-100 text-slate-800 font-bold rounded-xl border border-slate-300 text-xs whitespace-nowrap">
+            <button type="button" data-open-modal class="px-4 py-3 bg-slate-100 text-slate-800 font-bold rounded-full border border-slate-300 text-xs whitespace-nowrap">
                 Book Quote
             </button>
         </div>
     </div>
 
-    <!-- 14. INSTANT BOOKING & DISPATCH MODAL (Clean Light Theme) -->
+    <!-- 14. INSTANT BOOKING & DISPATCH MODAL -->
     <div id="bookingModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="relative bg-white border border-slate-200 rounded-2xl max-w-lg w-full p-6 sm:p-7 shadow-2xl animate-fadeIn">
+        <div class="relative bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl animate-fadeIn">
             <button type="button" data-close-modal class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg" aria-label="Close modal">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
 
             <div class="flex items-center gap-2 mb-2">
                 <span class="flex h-2.5 w-2.5 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
                 </span>
-                <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Priority Emergency Request</span>
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Priority Emergency Request</span>
             </div>
             
             <h3 class="text-xl font-bold text-slate-900 mb-1">Get Rapid Technician Dispatch</h3>
@@ -1274,23 +1455,23 @@
             <form data-ajax-form class="space-y-3">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
-                    <input type="text" required placeholder="Your full name" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-100">
+                    <input type="text" required placeholder="Your full name" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Direct Phone Number</label>
-                        <input type="tel" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-100">
+                        <input type="tel" required placeholder="(555) 000-0000" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase mb-1">5-Digit ZIP Code</label>
-                        <input type="text" required placeholder="e.g. 30303" maxlength="5" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-100">
+                        <input type="text" required placeholder="e.g. 30303" maxlength="5" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Needed</label>
-                    <select id="modalServiceSelect" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-100">
+                    <select id="modalServiceSelect" class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
                         <option value="burst-pipe">🚨 Burst Pipe / Flooding Water</option>
                         <option value="clogged-drain">🚿 Emergency Drain Snaking / Clog</option>
                         <option value="water-heater">🔥 Water Heater Leak / Cold Water</option>
@@ -1302,16 +1483,16 @@
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Emergency Notes (Optional)</label>
-                    <input type="text" placeholder="e.g. Main shutoff is hard to turn, standing water in kitchen..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-100">
+                    <input type="text" placeholder="e.g. Main shutoff is hard to turn, standing water in kitchen..." class="w-full px-3.5 py-2 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-900 focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
                 </div>
 
-                <button type="submit" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-black rounded-lg shadow-md transition text-sm uppercase tracking-wider mt-4">
+                <button type="submit" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-black rounded-full shadow-md shadow-blue-500/25 transition text-sm uppercase tracking-wider mt-4">
                     Confirm Priority Dispatch Request
                 </button>
             </form>
 
             <div class="mt-4 pt-3 border-t border-slate-100 text-center">
-                <a href="tel:8005552273" class="text-xs text-red-600 font-bold hover:underline">
+                <a href="tel:8005552273" class="text-xs text-blue-600 font-bold hover:underline">
                     Or call directly right now: (800) 555-CARE
                 </a>
             </div>
