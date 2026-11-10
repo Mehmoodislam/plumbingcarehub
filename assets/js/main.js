@@ -33,6 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.addEventListener('click', (e) => {
             if (e.target === mobileMenu) closeMobileMenu();
         });
+
+        // Mobile Services Accordion Toggle
+        const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+        const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+        const mobileServicesChevron = document.getElementById('mobileServicesChevron');
+        if (mobileServicesToggle && mobileServicesMenu) {
+            mobileServicesToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isHidden = mobileServicesMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileServicesMenu.classList.remove('hidden');
+                    mobileServicesChevron?.classList.add('rotate-180', 'text-blue-600');
+                } else {
+                    mobileServicesMenu.classList.add('hidden');
+                    mobileServicesChevron?.classList.remove('rotate-180', 'text-blue-600');
+                }
+            });
+        }
     }
 
     // 2. Sticky Navbar Shadow Effect on Scroll

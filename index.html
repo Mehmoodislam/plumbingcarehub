@@ -277,11 +277,185 @@
             <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-[14px] font-semibold text-slate-700" aria-label="Main Navigation">
                 <a href="index.html" class="text-blue-600 font-bold hover:text-blue-700 transition">Home</a>
                 <a href="about.html" class="hover:text-blue-600 transition">About Us</a>
-                <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                <a href="#why-us" class="hover:text-blue-600 transition">Why Us</a>
-                <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
-                <a href="#reviews" class="hover:text-blue-600 transition">Reviews</a>
-                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+
+                <!-- Mega Menu Dropdown Item for Services -->
+                <div class="group h-20 flex items-center">
+                    <a href="index.html#services" class="inline-flex items-center gap-1.5 hover:text-blue-600 transition py-6 group-hover:text-blue-600">
+                        <span>Services</span>
+                        <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Full Width Mega Menu Dropdown Container -->
+                    <div class="absolute top-full left-0 right-0 w-full bg-white shadow-2xl border-t border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-1 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                
+                                <!-- Column 1: Emergency & Commercial Plumbing -->
+                                <div class="space-y-6">
+                                    <!-- 3. Emergency Plumbing -->
+                                    <div class="bg-rose-50/50 p-4 rounded-2xl border border-rose-100">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <div class="flex items-center gap-2">
+                                                <span class="w-7 h-7 rounded-lg bg-rose-500 text-white flex items-center justify-center text-xs shadow-sm">🚨</span>
+                                                <h3 class="text-xs font-black uppercase tracking-wider text-rose-700">Emergency Plumbing</h3>
+                                            </div>
+                                            <span class="text-[10px] font-extrabold uppercase bg-rose-500 text-white px-2 py-0.5 rounded-full animate-pulse">24/7 Fast</span>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-700 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-rose-600 flex items-center justify-between group/link py-0.5 transition"><span>24/7 Emergency Plumber</span><span class="text-rose-400 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-rose-600 flex items-center justify-between group/link py-0.5 transition"><span>Burst Pipe Repair</span><span class="text-rose-400 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-rose-600 flex items-center justify-between group/link py-0.5 transition"><span>Emergency Leak Repair</span><span class="text-rose-400 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-rose-600 flex items-center justify-between group/link py-0.5 transition"><span>Overflowing Toilet</span><span class="text-rose-400 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-rose-600 flex items-center justify-between group/link py-0.5 transition"><span>Emergency Drain Cleaning</span><span class="text-rose-400 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- 2. Commercial Plumbing -->
+                                    <div class="p-2">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center text-xs">🏢</span>
+                                            <h3 class="text-xs font-black uppercase tracking-wider text-slate-800">Commercial Plumbing</h3>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-600 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Office Plumbing</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Restaurant Plumbing</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Commercial Pipe Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Commercial Drain Cleaning</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Commercial Water Heater</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Column 2: Residential Plumbing & Installation -->
+                                <div class="space-y-6">
+                                    <!-- 1. Residential Plumbing -->
+                                    <div class="bg-blue-50/50 p-4 rounded-2xl border border-blue-100">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center text-xs shadow-sm">🏠</span>
+                                            <h3 class="text-xs font-black uppercase tracking-wider text-blue-900">Residential Plumbing</h3>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-700 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Home Plumbing Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Kitchen Plumbing</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Bathroom Plumbing</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Toilet Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Faucet Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Sink Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- 7. Plumbing Installation -->
+                                    <div class="p-2">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs">🛠️</span>
+                                            <h3 class="text-xs font-black uppercase tracking-wider text-slate-800">Plumbing Installation</h3>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-600 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Toilet Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Faucet Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Sink Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Shower Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Bathtub Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Pipe Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Column 3: Drain & Sewer Services + Pipe & Leak Services -->
+                                <div class="space-y-6">
+                                    <!-- 4. Drain & Sewer Services -->
+                                    <div class="bg-sky-50/50 p-4 rounded-2xl border border-sky-100">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-7 h-7 rounded-lg bg-sky-500 text-white flex items-center justify-center text-xs shadow-sm">🚿</span>
+                                            <h3 class="text-xs font-black uppercase tracking-wider text-sky-900">Drain &amp; Sewer Services</h3>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-700 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Drain Cleaning</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Clogged Drain Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Sewer Line Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Sewer Line Replacement</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Hydro Jetting</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Drain Inspection</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- 6. Pipe & Leak Services -->
+                                    <div class="p-2">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-7 h-7 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center text-xs">🔍</span>
+                                            <h3 class="text-xs font-black uppercase tracking-wider text-slate-800">Pipe &amp; Leak Services</h3>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-600 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Pipe Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Pipe Replacement</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Leak Detection</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Line Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Line Installation</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-blue-600 flex items-center justify-between group/link py-0.5 transition"><span>Slab Leak Repair</span><span class="text-blue-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Column 4: Water Heater Services + Fast Help Promo Box -->
+                                <div class="space-y-6 flex flex-col justify-between">
+                                    <!-- 5. Water Heater Services -->
+                                    <div class="bg-amber-50/50 p-4 rounded-2xl border border-amber-100">
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center text-xs shadow-sm">🔥</span>
+                                            <h3 class="text-xs font-black uppercase tracking-wider text-amber-900">Water Heater Services</h3>
+                                        </div>
+                                        <ul class="space-y-1.5 text-[13px] text-slate-700 font-medium">
+                                            <li><a href="index.html#services" class="hover:text-amber-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Heater Installation</span><span class="text-amber-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-amber-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Heater Repair</span><span class="text-amber-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-amber-600 flex items-center justify-between group/link py-0.5 transition"><span>Tankless Water Heater</span><span class="text-amber-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-amber-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Heater Replacement</span><span class="text-amber-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                            <li><a href="index.html#services" class="hover:text-amber-600 flex items-center justify-between group/link py-0.5 transition"><span>Water Heater Maintenance</span><span class="text-amber-500 opacity-0 group-hover/link:opacity-100 transition-opacity">&rsaquo;</span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Quick Help Promo Box -->
+                                    <div class="bg-gradient-to-br from-[#071d38] to-[#092244] text-white p-5 rounded-2xl border border-white/10 shadow-lg relative overflow-hidden">
+                                        <div class="relative z-10">
+                                            <span class="text-[10px] font-black uppercase tracking-widest text-sky-300">Live Dispatch Help</span>
+                                            <h4 class="text-sm font-extrabold text-white mt-1 leading-snug">Need Immediate Service?</h4>
+                                            <p class="text-xs text-slate-300 mt-1">Standby master plumbers arrive in 30–45 mins. $0 overtime fees.</p>
+                                            <a href="tel:8005552273" class="mt-3.5 inline-flex items-center justify-center gap-1.5 w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-full text-xs shadow-md transition">
+                                                <svg class="w-3.5 h-3.5 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+                                                <span>(800) 555-CARE</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Mega Menu Bottom Guarantee Strip -->
+                            <div class="mt-8 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+                                <div class="flex flex-wrap items-center gap-4 text-slate-600">
+                                    <span class="flex items-center gap-1 text-emerald-600 font-bold">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        State Master Plumber Lic #MP-89412
+                                    </span>
+                                    <span>•</span>
+                                    <span>Upfront Flat-Rate Matrix</span>
+                                    <span>•</span>
+                                    <span>100% Written Workmanship Guarantee</span>
+                                </div>
+                                <a href="contact.html" class="text-blue-600 font-bold hover:underline inline-flex items-center gap-1">
+                                    <span>Schedule Custom Service Or Project Bid</span>
+                                    <span>&rarr;</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html#service-areas" class="hover:text-blue-600 transition">Services Area</a>
+                <a href="#" class="hover:text-blue-600 transition">Blog</a>
+                <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
             </nav>
 
             <!-- Desktop Action Buttons (Pill Buttons Inspired by Reference Design) -->
@@ -330,28 +504,117 @@
                         <span>About Us</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#services" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
-                        <span>Emergency Services</span>
+                    <!-- Mobile Services Accordion -->
+                    <div class="border-y border-slate-100 py-1">
+                        <button type="button" id="mobileServicesToggle" class="w-full p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between text-base font-bold text-slate-800">
+                            <span class="flex items-center gap-2">
+                                <span>All Services</span>
+                                <span class="text-[10px] font-extrabold uppercase bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">7 Categories</span>
+                            </span>
+                            <svg id="mobileServicesChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+
+                        <div id="mobileServicesMenu" class="hidden pl-2 pr-1 pt-2 pb-2 space-y-3 max-h-72 overflow-y-auto text-xs">
+                            <!-- 1. Residential -->
+                            <div class="bg-blue-50/50 p-2.5 rounded-xl border border-blue-100">
+                                <span class="font-extrabold text-blue-900 uppercase block mb-1">🏠 Residential Plumbing</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-600">
+                                    <a href="index.html#services" class="hover:text-blue-600">Home Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Kitchen</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Bathroom</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Toilet Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Faucet Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Sink Repair</a>
+                                </div>
+                            </div>
+
+                            <!-- 2. Commercial -->
+                            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="font-extrabold text-slate-800 uppercase block mb-1">🏢 Commercial Plumbing</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-600">
+                                    <a href="index.html#services" class="hover:text-blue-600">Office</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Restaurant</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Pipe Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Drain Clean</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Commercial Heater</a>
+                                </div>
+                            </div>
+
+                            <!-- 3. Emergency -->
+                            <div class="bg-rose-50/60 p-2.5 rounded-xl border border-rose-100">
+                                <span class="font-extrabold text-rose-800 uppercase block mb-1">🚨 Emergency Plumbing (24/7)</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-700">
+                                    <a href="index.html#services" class="hover:text-rose-600 font-semibold">24/7 Plumber</a>
+                                    <a href="index.html#services" class="hover:text-rose-600 font-semibold">Burst Pipe</a>
+                                    <a href="index.html#services" class="hover:text-rose-600 font-semibold">Leak Repair</a>
+                                    <a href="index.html#services" class="hover:text-rose-600 font-semibold">Toilet Overflow</a>
+                                    <a href="index.html#services" class="hover:text-rose-600 font-semibold">Emergency Drain</a>
+                                </div>
+                            </div>
+
+                            <!-- 4. Drain & Sewer -->
+                            <div class="bg-sky-50/50 p-2.5 rounded-xl border border-sky-100">
+                                <span class="font-extrabold text-sky-900 uppercase block mb-1">🚿 Drain &amp; Sewer</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-600">
+                                    <a href="index.html#services" class="hover:text-blue-600">Drain Cleaning</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Clogged Drain</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Sewer Line Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Replacement</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Hydro Jetting</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Inspection</a>
+                                </div>
+                            </div>
+
+                            <!-- 5. Water Heater -->
+                            <div class="bg-amber-50/50 p-2.5 rounded-xl border border-amber-100">
+                                <span class="font-extrabold text-amber-900 uppercase block mb-1">🔥 Water Heater</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-600">
+                                    <a href="index.html#services" class="hover:text-amber-700">Installation</a>
+                                    <a href="index.html#services" class="hover:text-amber-700">Repair</a>
+                                    <a href="index.html#services" class="hover:text-amber-700">Tankless</a>
+                                    <a href="index.html#services" class="hover:text-amber-700">Replacement</a>
+                                    <a href="index.html#services" class="hover:text-amber-700">Maintenance</a>
+                                </div>
+                            </div>
+
+                            <!-- 6. Pipe & Leak -->
+                            <div class="bg-teal-50/50 p-2.5 rounded-xl border border-teal-100">
+                                <span class="font-extrabold text-teal-900 uppercase block mb-1">🔍 Pipe &amp; Leak</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-600">
+                                    <a href="index.html#services" class="hover:text-blue-600">Pipe Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Replacement</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Leak Detection</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Water Line Repair</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Water Line Install</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Slab Leak</a>
+                                </div>
+                            </div>
+
+                            <!-- 7. Installation -->
+                            <div class="bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100">
+                                <span class="font-extrabold text-indigo-900 uppercase block mb-1">🛠️ Plumbing Installation</span>
+                                <div class="grid grid-cols-2 gap-1 text-slate-600">
+                                    <a href="index.html#services" class="hover:text-blue-600">Toilet Install</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Faucet Install</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Sink Install</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Shower Install</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Bathtub Install</a>
+                                    <a href="index.html#services" class="hover:text-blue-600">Pipe Install</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="contact.html#service-areas" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
+                        <span>Services Area</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#triage" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
-                        <span>Emergency First-Aid Guide</span>
+                    <a href="#" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
+                        <span>Blog</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
-                    <a href="#why-us" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
-                        <span>Why Property Owners Trust Us</span>
-                        <span class="text-xs text-slate-400">&rarr;</span>
-                    </a>
-                    <a href="#pricing" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
-                        <span>Coupons &amp; Flat Pricing</span>
-                        <span class="text-xs text-slate-400">&rarr;</span>
-                    </a>
-                    <a href="#reviews" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
-                        <span>Verified Customer Reviews</span>
-                        <span class="text-xs text-slate-400">&rarr;</span>
-                    </a>
-                    <a href="#faq" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
-                        <span>Frequently Asked Questions</span>
+                    <a href="contact.html" class="p-2 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center justify-between">
+                        <span>Contact &amp; 24/7 Dispatch</span>
                         <span class="text-xs text-slate-400">&rarr;</span>
                     </a>
                 </nav>
@@ -1421,6 +1684,7 @@
                 <p>&copy; 2026 PlumbingCareHub. All rights reserved. Locally owned &amp; operated licensed emergency contractor network.</p>
                 <div class="flex items-center gap-6">
                     <a href="about.html" class="hover:text-slate-300">About Us</a>
+                    <a href="contact.html" class="hover:text-slate-300">Contact Us</a>
                     <a href="#" class="hover:text-slate-300">Privacy Policy</a>
                     <a href="#" class="hover:text-slate-300">Terms of Service</a>
                     <a href="#" class="hover:text-slate-300">Sitemap</a>
